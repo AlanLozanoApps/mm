@@ -1,0 +1,32 @@
+<ion-header no-border>
+  <ion-toolbar color="dark">
+      <ion-buttons slot="start">
+        <ion-back-button text="" hideBackButton="true" defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title text-capitalize text-center *ngIf="title !== 'home'">{{ title }}</ion-title>
+      <ion-title *ngIf="title === 'home'"> <ion-img src="https://www.meetingmarketing.mx/wp-content/uploads/2018/10/Meeting-marketing-logo-y-variantes-de-color-df-01-03.png" style="height: 70px"></ion-img> </ion-title>
+      <ion-buttons slot="end" color="light" (click)="openFirst()">
+        <ion-button>
+          <ion-icon name="menu"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" menuId="first" id="first" contentId="first">
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title><ion-img src="https://www.meetingmarketing.mx/wp-content/uploads/2018/10/Meeting-marketing-logo-y-variantes-de-color-df-01-03.png" style="height: 70px"></ion-img></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>Inicio</ion-item>
+      <ion-item routerLink="/nosotros">Nosotros</ion-item>
+      <ion-item routerLink="/meetings">Meetings</ion-item>
+      <ion-item routerLink="/servicios">Servicios</ion-item>
+      <ion-item>Blog <small>dev</small></ion-item>
+      <ion-item routerLink="/contacto">Contacto</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
