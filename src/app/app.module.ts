@@ -12,6 +12,9 @@ import { ComponentsModule } from './components/components.module';
 import { firebaseConfig, environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { NgwWowModule } from 'ngx-wow';
+
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +25,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AppRoutingModule,
     ComponentsModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    NgwWowModule
   ],
   providers: [
     StatusBar,

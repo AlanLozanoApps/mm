@@ -29,10 +29,12 @@
     "@ionic/angular": "^4.1.0",
     "@ng-bootstrap/ng-bootstrap": "^2.0.0-alpha.0",
     "@ng-bootstrap/schematics": "^2.0.0-alpha.1",
+    "animate.css": "^3.7.2",
     "bootstrap": "^4.0.0",
     "core-js": "^2.5.4",
     "firebase": "^6.3.1",
     "gl-ionic-background-video": "0.0.5",
+    "ngx-wow": "^2.0.1",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.29"

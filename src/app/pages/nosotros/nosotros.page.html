@@ -1,26 +1,21 @@
 <app-header title='¿Quienes Somos?'></app-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label text-center><h1>Nosotros</h1></ion-label>
-  </ion-item>
-  <ion-item>
-    
-      <ion-slides autoplay="3000" loop="true" speed="300" pager="true" style="max-height: 40vh">
+      <ion-slides autoplay="10" loop="true" speed="300" pager="true" style="max-height: 40vh">
           <ion-slide>
             <div style="height: 100%; width: 100vw; background: url(/assets/images/organizadores-eventos.jpg) 50% 50%; background-size: cover">
-              <ion-row class="d-box">
+              <ion-row class="d-box" style="height: 30vh" > 
                   <ion-col class="d-v-box">
-                  <h1 style="color: #fff; text-shadow: 2px 2px 5px #202020">Planeación</h1>
+                  <h1 class="text-hover-image">Planeación</h1>
                 </ion-col>
               </ion-row>
             </div>
           </ion-slide>
           <ion-slide>
             <div style="height: 100%; width: 100vw; background: url(/assets/images/eventos-industriales.jpg) 50% 50%; background-size: cover">
-              <ion-row class="d-box">
+              <ion-row class="d-box" style="height: 30vh" > 
                   <ion-col class="d-v-box">
-                  <h1 style="color: #fff; text-shadow: 2px 2px 5px #202020">Organización</h1>
+                  <h1 class="text-hover-image">Organización</h1>
                 </ion-col>
               </ion-row>
             </div>
@@ -28,13 +23,76 @@
 
           <ion-slide>
               <div style="height: 100%; width: 100vw; background: url(/assets/images/eventos-b2b.jpg) 50% 50%; background-size: cover">
-                <ion-row class="d-box">
+                <ion-row class="d-box" style="height: 30vh" > 
                   <ion-col class="d-v-box">
-                    <h1 style="color: #fff; text-shadow: 2px 2px 5px #202020">Ejecución</h1>
+                    <h1 class="text-hover-image">Ejecución</h1>
                   </ion-col>
                 </ion-row>
               </div>
             </ion-slide>
         </ion-slides>
-  </ion-item>
+        <ion-row padding>
+          <ion-col size="12">
+            <h2 class="page-title">Conoce a <strong class="page-t-b">Meeting</strong>&nbsp;<strong class="page-t-g">Marketing</strong></h2>
+          </ion-col>
+          <ion-col size="6">
+            <ion-card>
+                <ion-item>
+                  <ion-icon name="help" slot="start"></ion-icon>
+                  <ion-label>¿Quienes Somos?</ion-label>
+                  <ion-button fill="outline" slot="end">View</ion-button>
+                </ion-item>
+              
+                <ion-card-content>
+                    Somos una empresa con base en Monterrey, N. L., 
+                    dedicada a la planeación, organización y ejecución
+                    de todo tipo de eventos y reuniones, con enfoque
+                    especial al sector industrial/empresarial. <br>
+                    Rubro en el que ayudamos a que nuestros clientes
+                    obtengan el mayor aprovechamiento del esfuerzo
+                    que están dispuestos a implementar en sus eventos.
+                </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="6">
+            <ion-card>
+                <ion-item>
+                  <ion-icon name="hand" slot="start"></ion-icon>
+                  <ion-label>¿Cual es su capacidad?</ion-label>
+                  <ion-button fill="outline" slot="end">View</ion-button>
+                </ion-item>
+              
+                <ion-card-content>
+                    Estamos conformados por más de <strong>1,000 colaboradores</strong> 
+                    en todo el país, 
+                    <span class="page-title page-t-b">Meeting</span> 
+                    <span class="page-title page-t-g">Marketing</span> 
+                    es una concentradora de soluciones, que satisface las necesidades 
+                    de las industrias, en proyectos de toda envergadura.
+                </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+          <ion-col size="12">
+              <ion-card>
+                  <ion-item>
+                    <ion-icon name="hand" slot="start"></ion-icon>
+                    <ion-label>¿Qué los hace destacar?</ion-label>
+                    <ion-button fill="outline" slot="end">View</ion-button>
+                  </ion-item>
+                
+                  <ion-card-content>
+                      Con equipo propio logramos rebasar el nivel de competencia actual, 
+                      y principalmente esto nos asegura la perfecta ejecución de todos nuestros 
+                      compromisos. Sabemos que cada uno de los miembros del capital humano que 
+                      conforma 
+                      <span class="page-title page-t-b">Meeting</span> 
+                      <span class="page-title page-t-g">Marketing</span>  entiende y aporta 
+                      todo su conocimiento y experiencia <i>–y crece conforme avanzamos-</i> 
+                      en el desarrollo de sus actividades, sensibles a los 
+                      objetivos que previamente se trazan.
+                  </ion-card-content>
+              </ion-card>
+            </ion-col>
+        </ion-row>
 </ion-content>
