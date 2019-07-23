@@ -1,8 +1,8 @@
 {
   "name": "imm",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Alan Lozano",
+  "homepage": "https://pwa.mx/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

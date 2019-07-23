@@ -1,0 +1,45 @@
+<ion-menu side="start" menuId="menuRoot" contentId="menuRoot">
+    <ion-header>
+      <ion-toolbar color="dark">
+        <ion-title><ion-img src="https://www.meetingmarketing.mx/wp-content/uploads/2018/10/Meeting-marketing-logo-y-variantes-de-color-df-01-03.png" style="height: 70px"></ion-img></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Inicio</ion-item>
+        <ion-item routerLink="/nosotros">
+          <ion-label>
+              Nosotros
+          </ion-label>
+        </ion-item>
+        <ion-item routerLink="/meetings">
+          <ion-label>
+              Meetings
+          </ion-label>
+        </ion-item>
+        <ion-item routerLink="/servicios">
+          <ion-label>
+              Servicios
+          </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-item slot="start" text-left>
+              <ion-label>Blog</ion-label>
+            </ion-item>
+            <ion-item slot="end">
+              <ion-badge color="secondary">próximamente</ion-badge>
+            </ion-item>
+        </ion-item>
+        <ion-item routerLink="/contacto">
+          <ion-label>
+              Contacto
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-menu-toggle>Cerrar</ion-menu-toggle>
+      </ion-item>
+      </ion-list>
+    </ion-menu>

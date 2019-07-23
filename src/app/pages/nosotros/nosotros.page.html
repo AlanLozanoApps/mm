@@ -1,9 +1,40 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>nosotros</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header title='¿Quienes Somos?'></app-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label text-center><h1>Nosotros</h1></ion-label>
+  </ion-item>
+  <ion-item>
+    
+      <ion-slides autoplay="3000" loop="true" speed="300" pager="true" style="max-height: 40vh">
+          <ion-slide>
+            <div style="height: 100%; width: 100vw; background: url(/assets/images/organizadores-eventos.jpg) 50% 50%; background-size: cover">
+              <ion-row class="d-box">
+                  <ion-col class="d-v-box">
+                  <h1 style="color: #fff; text-shadow: 2px 2px 5px #202020">Planeación</h1>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div style="height: 100%; width: 100vw; background: url(/assets/images/eventos-industriales.jpg) 50% 50%; background-size: cover">
+              <ion-row class="d-box">
+                  <ion-col class="d-v-box">
+                  <h1 style="color: #fff; text-shadow: 2px 2px 5px #202020">Organización</h1>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-slide>
 
+          <ion-slide>
+              <div style="height: 100%; width: 100vw; background: url(/assets/images/eventos-b2b.jpg) 50% 50%; background-size: cover">
+                <ion-row class="d-box">
+                  <ion-col class="d-v-box">
+                    <h1 style="color: #fff; text-shadow: 2px 2px 5px #202020">Ejecución</h1>
+                  </ion-col>
+                </ion-row>
+              </div>
+            </ion-slide>
+        </ion-slides>
+  </ion-item>
 </ion-content>
