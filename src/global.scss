@@ -32,6 +32,10 @@
     text-shadow: 2px 2px 5px #202020
 }
 
+.text-meetings{
+    font-size: 50px;
+}
+
 .page-title{
     font-family: 'Bebas';
 }
@@ -42,4 +46,19 @@
 
 .page-t-g{
     color: var(--ion-color-secondary)
+}
+
+.img-title{
+    height: 25vh;
+    min-height: 250px;
+}
+
+/* Mofiers */
+
+ion-router-outlet{
+    margin-bottom: 55px;
+}
+
+.card-content-md {
+    font-size: 18px!important;
 }

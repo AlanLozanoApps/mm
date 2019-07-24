@@ -6,17 +6,16 @@
           <gl-background-video src="/assets/videos/o.mp4" style="height: 90vh">
           </gl-background-video>
           <ion-row style="z-index: 1;">
-            <ion-col size="12" style="background: #0000005e" padding>
+            <ion-col size="12" style="background: #0000005e; border-radius: 25px" padding>
                 <ngx-typed-js 
                     [strings]="[
-                      'Creamos.', 
-                      'Generamos.', 
-                      'Inpactamos.', 
-                      'Crecemos.', 
-                      'Inspiramos.',
+                      'Creamos Experiencias.', 
+                      'Generamos Historias.', 
+                      'Impactamos Vidas.', 
                       'Redefinimos la Industria.'
                       ]"
                     [typeSpeed]="70"
+                    (completed)="getMenu()"
                     >
                     <h1 class="text-hover-image">Nosotros <br> <span class="typing page-t-b"></span></h1>
                 </ngx-typed-js>
