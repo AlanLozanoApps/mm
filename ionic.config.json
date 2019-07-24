@@ -1,5 +1,7 @@
 {
   "name": "imm",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

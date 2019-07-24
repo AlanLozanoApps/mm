@@ -11,7 +11,6 @@ export class HomePage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    new WOW().init();
   }
 
 }

@@ -15,7 +15,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { NgwWowModule } from 'ngx-wow';
 
 
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

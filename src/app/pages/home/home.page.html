@@ -5,26 +5,32 @@
       <ion-slide>
           <gl-background-video src="/assets/videos/o.mp4" style="height: 90vh">
           </gl-background-video>
-          <ion-row style="z-index: 1">
+          <ion-row style="z-index: 1;">
+            <ion-col size="12" style="background: #0000005e" padding>
+                <ngx-typed-js 
+                    [strings]="[
+                      'Creamos.', 
+                      'Generamos.', 
+                      'Inpactamos.', 
+                      'Crecemos.', 
+                      'Inspiramos.',
+                      'Redefinimos la Industria.'
+                      ]"
+                    [typeSpeed]="70"
+                    >
+                    <h1 class="text-hover-image">Nosotros <br> <span class="typing page-t-b"></span></h1>
+                </ngx-typed-js>
+            </ion-col>
             <ion-col size="12">
-              <h1 class="text-hover-image">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti aperiam ducimus totam necessitatibus soluta sit magnam illum iusto, vero molestiae minima unde. Tenetur, earum. Recusandae, et. Inventore, illo possimus! Sequi.</h1>
+              <ion-button color="primary"
+                          class="wow flipInX" 
+                          data-wow-delay="2s" 
+                          size="large">
+                Contactanos
+                <ion-icon slot="end" name="mail-open" size="large"></ion-icon>
+              </ion-button>
             </ion-col>
           </ion-row>
       </ion-slide>
-        <ion-slide>
-          <div style="height: 90vh; width: 100vw; background: url(/assets/images/organizacion-eventos.jpeg) 50% 50%; background-size: cover">
-            
-            <ion-row padding class="d-box">
-              <ion-col size="6" size-sm="12" class="d-v-box">
-                <h1 class="text-hover-image">Organización de Eventos en México</h1>
-              
-                <ion-button routerLink="/contacto">
-                  Contactanos
-                </ion-button>
-              </ion-col>
-            </ion-row>
-            
-          </div>
-        </ion-slide>
     </ion-slides>
 </ion-content>
