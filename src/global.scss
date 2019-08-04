@@ -1,0 +1,64 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+@import 'theme/fonts.scss';
+@import "~animate.css/animate.css";
+
+.title, h1, h2 {
+    font-family: 'Keep Calm';
+}
+
+.d-box {
+    width: 100%;
+    display: table;
+    height: 90vh;
+    overflow: hidden;
+}
+.d-v-box {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.text-hover-image{
+    color: #fff; 
+    text-shadow: 2px 2px 5px #202020
+}
+
+.text-meetings{
+    font-size: 50px;
+}
+
+.page-title{
+    font-family: 'Bebas';
+}
+
+.page-t-b{
+    color: var(--ion-color-primary)
+}
+
+.page-t-g{
+    color: var(--ion-color-secondary)
+}
+
+.img-title{
+    height: 25vh;
+    min-height: 250px;
+}
+
+/* Mofiers */
+
+ion-router-outlet{
+    margin-bottom: 55px;
+}
+
+.card-content-md {
+    font-size: 18px!important;
+}

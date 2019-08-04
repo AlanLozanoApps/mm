@@ -1,0 +1,92 @@
+<app-header title='Blog'></app-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input placeholder="Ingresar Titulo" [(ngModel)]="postName"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-input placeholder="Ingresar Subtitulo" [(ngModel)]="postSubtitle"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-textarea placeholder="Ingresar Contenido" [(ngModel)]="postContent"></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button (click)="CreateRecord()" [disabled]="!postName || !postSubtitle || !postContent">
+          <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
+          &nbsp;Guardar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+ 
+  <ion-card *ngFor="let item of posts">
+    <span *ngIf="!item.isEdit; else elseBlock">
+      <ion-card-header>
+        <ion-card-title>{{item.Name}}</ion-card-title>
+        <ion-card-subtitle>{{item.Subtitle}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        {{item.Content}}
+
+        <hr>
+ 
+        <ion-button shape="round" color="secondary" size="small" (click)="EditRecord(item)">
+          <ion-icon size="small" slot="icon-only" name="create"></ion-icon>
+ 
+        </ion-button>
+        <ion-button shape="round" color="danger" size="small" (click)="RemoveRecord(item.id)">
+          <ion-icon size="small" slot="icon-only" name="trash"></ion-icon>
+ 
+        </ion-button>
+      </ion-card-content>
+    </span>
+    <ng-template #elseBlock>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                Editar
+              </ion-col>
+              <ion-col>
+                <ion-button fill="clear" color="medium" size="small" (click)="item.isEdit = false">
+                  Cancelar
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button fill="outline" color="success" size="small" (click)="UpdateRecord(item)">
+                  Actualizar
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label><strong>Titulo</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label><strong>Sub Titulo</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditSubtitle"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label><strong>Contenido</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditContent"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ng-template>
+  </ion-card>
+</ion-content>
