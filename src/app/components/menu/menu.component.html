@@ -35,12 +35,11 @@
               Servicios
           </ion-label>
         </ion-item>
-        <ion-item>
+        <ion-item (click)="hideSideMenu()" routerLink="/blog">
             <ion-icon slot="start" name="book"></ion-icon>
-            <ion-label>Blog</ion-label>
-            <ion-item slot="end">
-              <ion-badge color="secondary">Próximamente</ion-badge>
-            </ion-item>
+            <ion-label>
+              Blog
+            </ion-label>
         </ion-item>
         <ion-item (click)="hideSideMenu()" routerLink="/contacto">
             <ion-icon slot="start" name="mail"></ion-icon>
@@ -51,8 +50,27 @@
       </ion-list>
     </ion-content>
     <ion-list>
+      <ion-item id="login-menu" (click)="hideSideMenu()" routerLink="/login">
+          <ion-icon slot="start" name="contact"></ion-icon>
+          <ion-label>
+            Iniciar
+          </ion-label>
+      </ion-item>
+      <ion-item id="user-menu" (click)="hideSideMenu()" routerLink="/perfil">
+          <ion-icon slot="start" name="people"></ion-icon>
+          <ion-label>
+            Mi Usuario
+          </ion-label>
+      </ion-item>
+      <ion-item id="user-kill" (click)="killSesion()" routerLink="/perfil">
+          <ion-icon slot="start" name="close-circle"></ion-icon>
+          <ion-label>
+            Cerrar Sesión
+          </ion-label>
+      </ion-item>
       <ion-item>
-        <ion-menu-toggle>Cerrar</ion-menu-toggle>
+          <ion-icon slot="start" name="close"></ion-icon>
+          <ion-menu-toggle>Cerrar</ion-menu-toggle>
       </ion-item>
       </ion-list>
     </ion-menu>

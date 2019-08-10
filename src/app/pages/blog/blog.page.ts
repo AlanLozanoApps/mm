@@ -13,7 +13,9 @@ export class BlogPage implements OnInit {
   postSubtitle: string;
   postContent: string;
 
-  constructor(private fireStoreService: FireStoreService) { }
+  constructor(
+    private fireStoreService: FireStoreService
+  ) { }
 
   ngOnInit() {
     this.fireStoreService.read_Posts().subscribe(data => {
@@ -60,7 +62,7 @@ export class BlogPage implements OnInit {
   }
 
   UpdateRecord(recordRow) {
-    let record = {};
+    const record = {};
     record['Name'] = recordRow.EditName;
     record['Subtitle'] = recordRow.EditSubtitle;
     record['Content'] = recordRow.EditContent;

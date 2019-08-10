@@ -17,6 +17,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { NgwWowModule } from 'ngx-wow';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,6 +33,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     ReactiveFormsModule
   ],
   providers: [

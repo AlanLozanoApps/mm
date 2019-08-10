@@ -1,0 +1,39 @@
+<app-header title='home'></app-header>
+  
+  <ion-content>
+  
+  <ion-list padding>
+      <form padding>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input
+            [(ngModel)]="user.email"
+            name="email"
+            type="text"
+            autocapitalize="off"
+            required
+          >
+          </ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Contraseña</ion-label>
+          <ion-input
+            [(ngModel)]="user.password"
+            name="password"
+            type="password"
+            required
+          >
+          </ion-input>
+        </ion-item>
+        <div padding>
+            <ion-button (click)="login()">
+              Iniciar
+            </ion-button>
+            <ion-button (click)="signin()">
+              Registrar
+            </ion-button>
+        </div>
+      </form>
+    </ion-list>
+  </ion-content>

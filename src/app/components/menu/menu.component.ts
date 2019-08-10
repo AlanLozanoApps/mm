@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,12 +10,19 @@ import { MenuController } from '@ionic/angular';
 
 export class MenuComponent implements OnInit {
 
-  constructor(private menu: MenuController) { }
+  constructor(
+    private menu: MenuController,
+    private authService: AuthService
+    ) { }
 
   ngOnInit() {}
 
   hideSideMenu() {
     this.menu.close();
+  }
+
+  killSesion() {
+    this.authService.logoutUser();
   }
 
 }
