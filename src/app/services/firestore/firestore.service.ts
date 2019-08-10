@@ -10,6 +10,10 @@ export class FireStoreService {
     private firestore: AngularFirestore
   ) { }
 
+  create_contact(record) {
+    return this.firestore.collection('Contacts').add(record);
+  }
+
   create_NewPost(record) {
     return this.firestore.collection('Posts').add(record);
   }

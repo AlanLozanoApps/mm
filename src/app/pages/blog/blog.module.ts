@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 
 import { BlogPage } from './blog.page';
 import { ComponentsModule } from '../../components/components.module';
-import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 const routes: Routes = [
   {
@@ -22,9 +21,7 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    ComponentsModule,
-    FroalaEditorModule,
-    FroalaViewModule
+    ComponentsModule
   ],
   declarations: [BlogPage]
 })

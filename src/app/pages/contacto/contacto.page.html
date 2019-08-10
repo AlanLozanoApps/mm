@@ -50,20 +50,20 @@
         <ion-card-content padding>
           <ion-item>
             <ion-label position="floating">Ingresa tu Nombre</ion-label>
-            <ion-input></ion-input>
+            <ion-input [(ngModel)]="name"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="floating">Ingresa tu Teléfono</ion-label>
-            <ion-input></ion-input>
+            <ion-input [(ngModel)]="phone"></ion-input>
           </ion-item>
           <ion-item>
           <ion-label position="floating">Mensaje</ion-label>
-            <ion-textarea></ion-textarea>
+            <ion-textarea [(ngModel)]="message"></ion-textarea>
           </ion-item>
         </ion-card-content>
       </ion-card>
       <div margin>
-        <ion-button expand="full" color="success">
+        <ion-button expand="full" color="success" (click)="saveContact()">
           Contactar
         </ion-button>
       </div>

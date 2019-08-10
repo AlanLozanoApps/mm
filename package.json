@@ -34,6 +34,7 @@
     "core-js": "^2.5.4",
     "firebase": "^6.3.4",
     "gl-ionic-background-video": "0.0.5",
+    "jquery": "^3.4.1",
     "ngx-typed-js": "^1.1.0",
     "ngx-wow": "^2.0.1",
     "rxjs": "~6.5.1",
