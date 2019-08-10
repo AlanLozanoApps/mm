@@ -14,9 +14,7 @@ export class BlogPage implements OnInit {
   postSubtitle: string;
   postContent: string;
 
-  constructor(
-    private fireStoreService: FireStoreService
-  ) { }
+  constructor(private fireStoreService: FireStoreService) { }
 
   ngOnInit() {
     this.fireStoreService.read_Posts().subscribe(data => {

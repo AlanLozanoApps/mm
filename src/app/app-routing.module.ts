@@ -15,6 +15,8 @@ export const routes: Routes = [
   { path: 'lanzamientos', loadChildren: './pages/meetings/lanzamientos/lanzamientos.module#LanzamientosPageModule' },
   { path: 'plenarias', loadChildren: './pages/meetings/plenarias/plenarias.module#PlenariasPageModule' },
   { path: 'premiaciones', loadChildren: './pages/meetings/premiaciones/premiaciones.module#PremiacionesPageModule' },
+  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+  { path: 'perfil', loadChildren: './pages/perfil/perfil.module#PerfilPageModule' },
 ];
 
 @NgModule({

@@ -8,7 +8,6 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
   user = { email : '', password : ''};
 
   constructor(
