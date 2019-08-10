@@ -9,6 +9,7 @@ import { FireStoreService } from '../../services/firestore/firestore.service';
 export class BlogPage implements OnInit {
 
   posts: any;
+  postImage: string;
   postName: string;
   postSubtitle: string;
   postContent: string;
@@ -24,6 +25,7 @@ export class BlogPage implements OnInit {
         return {
           id: e.payload.doc.id,
           isEdit: false,
+          Image: e.payload.doc.data()['Image'],
           Name: e.payload.doc.data()['Name'],
           Subtitle: e.payload.doc.data()['Subtitle'],
           Content: e.payload.doc.data()['Content'],
@@ -36,6 +38,7 @@ export class BlogPage implements OnInit {
 
   CreateRecord() {
     const record = {};
+    record['Image'] = this.postImage;
     record['Name'] = this.postName;
     record['Subtitle'] = this.postSubtitle;
     record['Content'] = this.postContent;
@@ -56,6 +59,7 @@ export class BlogPage implements OnInit {
 
   EditRecord(record) {
     record.isEdit = true;
+    record.EditImage = record.Image;
     record.EditName = record.Name;
     record.EditSubtitle = record.Subtitle;
     record.EditContent = record.Content;
@@ -63,6 +67,7 @@ export class BlogPage implements OnInit {
 
   UpdateRecord(recordRow) {
     const record = {};
+    record['Image'] = recordRow.EditImage;
     record['Name'] = recordRow.EditName;
     record['Subtitle'] = recordRow.EditSubtitle;
     record['Content'] = recordRow.EditContent;

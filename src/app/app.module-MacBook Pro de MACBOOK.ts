@@ -17,7 +17,10 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { NgwWowModule } from 'ngx-wow';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+import { NgxSummernoteModule } from 'ngx-summernote';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,9 +36,9 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     ReactiveFormsModule,
-    FroalaEditorModule.forRoot(),
-    FroalaViewModule.forRoot()
+    NgxSummernoteModule
   ],
   providers: [
     StatusBar,

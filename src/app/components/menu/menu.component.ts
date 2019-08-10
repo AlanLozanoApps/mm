@@ -23,6 +23,7 @@ export class MenuComponent implements OnInit {
 
   killSesion() {
     this.authService.logoutUser();
+    window.location.reload();
   }
 
 }
