@@ -9,6 +9,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
   user = { email : '', password : ''};
+  allowNewUser = this.can_add();
 
   constructor(
     public authService: AuthService,
@@ -16,6 +17,10 @@ export class LoginPage implements OnInit {
   ) { }
 
   ngOnInit() {
+  }
+
+  can_add() {
+    return false;
   }
 
   signin() {
@@ -67,6 +72,4 @@ export class LoginPage implements OnInit {
       await alert.present();
     });
   }
-
-
 }

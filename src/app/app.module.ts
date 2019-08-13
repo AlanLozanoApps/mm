@@ -19,6 +19,9 @@ import { NgwWowModule } from 'ngx-wow';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/auth';
 
+import { Network } from '@ionic-native/network/ngx';
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -33,13 +36,14 @@ import { AngularFireAuth } from '@angular/fire/auth';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     AngularFireDatabaseModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    AngularFireAuth
+    AngularFireAuth,
+    Network
   ],
   bootstrap: [AppComponent]
 })

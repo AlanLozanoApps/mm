@@ -1,11 +1,14 @@
-<app-header title='Iniciar Sesion'></app-header>
+<app-header title=''></app-header>
   
   <ion-content>
   
   <ion-list padding>
+      <ion-item>
+        <h2 text-center>Inicio de Sesión</h2>
+      </ion-item>
       <form padding>
         <ion-item>
-          <ion-label floating>Email</ion-label>
+          <ion-label position="floating">Correo Electrónico</ion-label>
           <ion-input
             [(ngModel)]="user.email"
             name="email"
@@ -17,7 +20,7 @@
         </ion-item>
   
         <ion-item>
-          <ion-label floating>Contraseña</ion-label>
+          <ion-label position="floating">Contraseña</ion-label>
           <ion-input
             [(ngModel)]="user.password"
             name="password"
@@ -26,11 +29,11 @@
           >
           </ion-input>
         </ion-item>
-        <div padding>
+        <div padding text-center>
             <ion-button (click)="login()">
-              Iniciar
+              Acceder
             </ion-button>
-            <ion-button (click)="signin()">
+            <ion-button *ngIf="allowNewUser === true" (click)="signin()">
               Registrar
             </ion-button>
         </div>

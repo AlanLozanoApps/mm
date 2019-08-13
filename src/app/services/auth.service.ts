@@ -29,7 +29,7 @@ export class AuthService {
     this.afAuth.auth.signOut();
   }
 
-  get Session() {
+  public get Session() {
     return this.afAuth.authState;
   }
 

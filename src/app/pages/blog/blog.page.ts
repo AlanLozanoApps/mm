@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FireStoreService } from '../../services/firestore/firestore.service';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-blog',
@@ -14,7 +15,16 @@ export class BlogPage implements OnInit {
   postSubtitle: string;
   postContent: string;
 
-  constructor(private fireStoreService: FireStoreService) { }
+  constructor(
+    public seo: SeoService,
+    private fireStoreService: FireStoreService
+  ) {
+    this.seo.addSeo(
+      'Blog - Meeting Marketing',
+      'Hablemos sobre eventos',
+      '/assets/images/eventos-industriales.jpeg'
+    );
+  }
 
   ngOnInit() {
     this.fireStoreService.read_Posts().subscribe(data => {
