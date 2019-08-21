@@ -1,0 +1,14 @@
+<app-header title="Publicaciòn"></app-header>
+<ion-content padding>
+  <ion-col *ngFor="let item of posts" size="12">
+    <div *ngIf="item.URL === this.URL" class="container">
+      <h1 [innerHtml]="item.Name"></h1>
+      <hr>
+      <h5 text-justify [innerHtml]="item.Subtitle"></h5>
+      <hr>
+      <ion-img [src]="item.Image"></ion-img>
+      <hr>
+      <div [innerHtml]="item.Content"></div>
+    </div>
+  </ion-col>
+</ion-content>

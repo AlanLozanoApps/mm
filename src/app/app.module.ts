@@ -21,7 +21,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 import { Network } from '@ionic-native/network/ngx';
 
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

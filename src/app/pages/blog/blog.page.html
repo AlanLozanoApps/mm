@@ -3,23 +3,33 @@
 <ion-content>
   <ion-grid fixed id="blog-post-form">
     <ion-row>
-      <ion-col>
+      <ion-col size="12">
         <ion-item>
+          <ion-label position="floating">URL de la imagen</ion-label>
           <ion-input placeholder="Ingresar Imagen del Post" [(ngModel)]="postImage"></ion-input>
         </ion-item>
       </ion-col>
-      <ion-col>
+      <ion-col size="6">
         <ion-item>
+          <ion-label position="floating">Titulo</ion-label>
           <ion-input placeholder="Ingresar Titulo" [(ngModel)]="postName"></ion-input>
         </ion-item>
       </ion-col>
-      <ion-col>
+      <ion-col size="6">
         <ion-item>
+          <ion-label position="floating">Subtitulo</ion-label>
           <ion-input placeholder="Ingresar Subtitulo" [(ngModel)]="postSubtitle"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="12">
-        <ion-item>
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+          <strong>Generar HTML y pergarlo en el siguiente campo </strong> <a class="btn btn-outline-dark" href="https://htmled.it/or/">Ir al generador</a>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <ion-item text-center>
+          <ion-label position="floating">Pegar texto aqui</ion-label>
           <ion-textarea [(ngModel)]="postContent"></ion-textarea>
         </ion-item>
       </ion-col>
@@ -36,8 +46,8 @@
  
  
   <ion-row>
-    <ion-col size="12" size-sm="4">
-      <ion-card *ngFor="let item of posts" size="4">
+    <ion-col *ngFor="let item of posts" size-md="4">
+      <ion-card>
         <span *ngIf="!item.isEdit; else elseBlock">
           <ion-card-header>
             <ion-img [src]="(item.Image)"></ion-img>
@@ -45,7 +55,16 @@
             <ion-card-subtitle [innerHtml]="(item.Subtitle)"></ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
-
+          <ion-row>
+            <ion-col size="12" text-center>
+              <ion-button shape="round" color="tertiary" size="small" [routerLink]="'/post/' + item.URL">
+                  <ion-icon size="small" slot="icon-only" name="eye"></ion-icon>
+                  <ion-text>
+                    <span>Visualizar</span>
+                  </ion-text>
+              </ion-button>
+            </ion-col>
+          </ion-row>
           <ion-row id="blog-post-actions">
               <ion-col size="6" text-center>
                 <ion-button shape="round" color="secondary" size="small" (click)="EditRecord(item)">

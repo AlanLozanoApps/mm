@@ -27,7 +27,7 @@ export class AppComponent {
     setInterval(() => {
       this.check_sesion();
       this.disconnectSubscription();
-    }, 5000);
+    }, 500);
 
   }
 
@@ -41,12 +41,10 @@ export class AppComponent {
     this.authService.Session.subscribe( session => {
       if ( session ) {
         $(document).ready(() => {
-          console.log('user is autenticated');
           $('#login-menu').hide();
         });
       } else {
         $(document).ready(() => {
-          console.log('user is not autenticated');
           $('#login-menu').show();
 
           $('#user-menu').hide();
