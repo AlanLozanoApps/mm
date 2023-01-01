@@ -46,13 +46,13 @@
     "npm": "^6.10.3",
     "rxjs": "^6.5.2",
     "rxjs-compat": "^6.5.2",
-    "ts-loader": "^6.0.4",
+    "ts-loader": "^9.4.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.29"
   },
   "devDependencies": {
     "@angular-devkit/architect": "~0.13.8",
-    "@angular-devkit/build-angular": "~0.13.8",
+    "@angular-devkit/build-angular": "~15.0.4",
     "@angular-devkit/core": "~7.3.8",
     "@angular-devkit/schematics": "~7.3.8",
     "@angular/cli": "~7.3.8",
